@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import json
 
 import argparse
 
@@ -18,6 +19,17 @@ def main() -> None:
             
         case _:
             parser.print_help()
+            
+"""     result = []
+    with open("data/movies.json", "r") as file:
+        data = json.load(file)
+    for movie in data:
+        if args.query in movie.title():
+            result.append(movie)
+
+    for i, movie in enumerate(result):
+        print(f"{i+1}. Movie Title {movie.title}")
+             """
 
 
 if __name__ == "__main__":
