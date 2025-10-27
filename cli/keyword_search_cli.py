@@ -20,16 +20,16 @@ def main() -> None:
         case _:
             parser.print_help()
             
-"""     result = []
+    result = []
+    data = {}        
     with open("data/movies.json", "r") as file:
         data = json.load(file)
-    for movie in data:
-        if args.query in movie.title():
+    for movie in data["movies"]:
+        if args.query in movie["title"]:
             result.append(movie)
 
     for i, movie in enumerate(result):
-        print(f"{i+1}. Movie Title {movie.title}")
-             """
+        print(f"{i+1}. Movie Title {movie["title"]}")
 
 
 if __name__ == "__main__":
