@@ -19,13 +19,15 @@ def main() -> None:
             
         case _:
             parser.print_help()
-            
+    
+    
+    
     result = []
     data = {}        
     with open("data/movies.json", "r") as file:
         data = json.load(file)
     for movie in data["movies"]:
-        if args.query in movie["title"]:
+        if args.query.lower() in movie["title"].lower():
             result.append(movie)
 
     for i, movie in enumerate(result):
